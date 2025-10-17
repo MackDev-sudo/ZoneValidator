@@ -1,0 +1,78 @@
+/* Header.css */
+.header {
+    background-color: #1e293b;
+    border-bottom: 1px solid #475569;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-logo {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: white;
+}
+
+.header-brand-info h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.header-brand-info p {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #475569;
+    color: #cbd5e1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-button:hover {
+    background-color: #64748b;
+    color: white;
+}
+
+.header-button svg {
+    width: 1rem;
+    height: 1rem;
+}

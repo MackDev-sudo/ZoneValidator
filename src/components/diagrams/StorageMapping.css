@@ -1,0 +1,503 @@
+/* StorageMapping.css */
+.storage-mapping {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.diagram-header {
+    margin-bottom: 1.5rem;
+}
+
+.diagram-header h2 {
+    margin: 0 0 0.5rem 0;
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.diagram-header p {
+    margin: 0 0 1rem 0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.stats-summary {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    min-width: 80px;
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-item.success {
+    background: #dcfce7;
+    border-color: #16a34a;
+}
+
+.stat-item.error {
+    background: #fecaca;
+    border-color: #dc2626;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+.filters-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-input,
+.filter-select {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.search-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.export-button {
+    padding: 0.625rem 1.25rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.export-button:hover {
+    background: #2563eb;
+}
+
+.no-data,
+.no-results {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+.mappings-container {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    background: white;
+    padding: 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 400px);
+}
+
+.grouped-mappings-table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.grouped-mappings-table thead {
+    background: #f8fafc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.grouped-mappings-table th {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.grouped-mappings-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: top;
+}
+
+.grouped-mappings-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.grouped-mappings-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.row-ok {
+    background: #f0fdf4;
+}
+
+.row-error {
+    background: #fef2f2;
+}
+
+.server-cell {
+    font-weight: 600;
+    color: #1e3a8a;
+    max-width: 200px;
+}
+
+.health-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.health-ok {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.health-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.expand-button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-left: 4px;
+    transition: background 0.2s;
+}
+
+.expand-button:hover {
+    background: #2563eb;
+}
+
+.wwn-logged-in {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.wwn-not-logged-in {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.path-status-cell {
+    text-align: center;
+    font-weight: 600;
+}
+
+.path-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.path-ok {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.path-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.connectivity-button {
+    padding: 0.625rem 1.25rem;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.connectivity-button:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #111827;
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.diagram-container {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagram-container .mermaid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.server-cell strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.connection-count {
+    display: block;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: normal;
+}
+
+.list-cell {
+    color: #4b5563;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+.wwn-list-cell {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #4b5563;
+    max-width: 200px;
+    word-break: break-all;
+}
+
+.fabric-cell {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.fabric-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #c7d2fe;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        min-width: auto;
+    }
+
+    .export-button {
+        width: 100%;
+    }
+
+    .grouped-mappings-table {
+        font-size: 0.8rem;
+    }
+
+    .grouped-mappings-table th,
+    .grouped-mappings-table td {
+        padding: 0.75rem;
+    }
+
+    .list-cell {
+        max-width: 200px;
+    }
+
+    .wwn-list-cell {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .storage-mapping {
+        padding: 1rem;
+    }
+
+    .diagram-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .stats-summary {
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .stat-item {
+        min-width: 70px;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .grouped-mappings-table {
+        font-size: 0.75rem;
+    }
+
+    .grouped-mappings-table th,
+    .grouped-mappings-table td {
+        padding: 0.5rem;
+    }
+
+    .server-cell {
+        min-width: 120px;
+    }
+
+    .server-cell strong {
+        font-size: 0.9rem;
+    }
+
+    .connection-count {
+        font-size: 0.7rem;
+    }
+
+    .list-cell {
+        font-size: 0.7rem;
+        max-width: 150px;
+    }
+
+    .wwn-list-cell {
+        font-size: 0.65rem;
+        max-width: 120px;
+    }
+
+    .fabric-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
